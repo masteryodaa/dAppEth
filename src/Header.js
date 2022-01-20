@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import metapng from "./metamask.webp";
-const Web3 = require('./web3.min.js')
+// const Web3 = require('./web3.min.js')
+const Web3 = require('https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js');
 
 
 function Header(props) {

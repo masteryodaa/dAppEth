@@ -90,7 +90,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-
-.footer{
-  
+a{
+  text-decoration: none;
+  color: black;
 }

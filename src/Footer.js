@@ -1,10 +1,11 @@
 import React from 'react';
-import {BsGithub} from 'react-icons/bs';
+import { BsGithub } from 'react-icons/bs';
 
 function Footer() {
   return <div className='footer fixed-bottom'>
-
-      <div className="github text-center">Fork it at <BsGithub/></div>
+    <a href="https://github.com/masteryodaa/dAppEth">
+      <div className="github text-center">Fork it at <BsGithub /></div>
+    </a>
   </div>;
 }
 
