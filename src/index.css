@@ -93,4 +93,10 @@ input::-webkit-inner-spin-button {
 a{
   text-decoration: none;
   color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+ a:hover{
+  color: red;
 }

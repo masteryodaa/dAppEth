@@ -14,7 +14,7 @@ function Transaction(props) {
     
 
     return (
-        <div className="container py-1" id='container'>
+        <div className="container py-1 mt-5" id='container'>
             <div className="cardhead my-2">
                 <div className="cardicon"><FaEthereum /></div>
                 <div className="cardtitle"><h6>Ethereum</h6></div>
@@ -22,9 +22,9 @@ function Transaction(props) {
 
             <div className="cardbody pt-3">
 
-                <div className="h4 text-center">{props.eth}</div>
+                <div className="h4 text-center">{props.eth + " ETH"}</div>
 
-                <div className="d-flex receiver my-1">Receiver : {props.receiver}</div>
+                <div className="d-flex receiver my-1">Receiver : <div className="fw-bold ms-1">{props.receiver}</div></div>
 
                 <div className="d-flex sender my-1">Sender : <div className="fw-bold ms-1">{props.address}</div></div>
 
