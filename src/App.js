@@ -3,7 +3,6 @@ import Body from "./Body";
 import Footer from "./Footer";
 import DoneTransaction from "./DoneTransaction";
 import {useState} from 'react';
-// const Web3 = require('./web3.min.js')
 
 
 function App() {

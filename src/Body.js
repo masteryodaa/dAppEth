@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { FaEthereum } from 'react-icons/fa';
 import Transaction from './Transaction';
-// import loadgif from './load.gif';
 
 
 function Body(props) {
