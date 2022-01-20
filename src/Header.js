@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import metapng from "./metamask.png";
-const Web3 = require('https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js');
-
 
 function Header(props) {
 
@@ -22,13 +20,13 @@ function Header(props) {
 
         setConnection(true);
 
-        const web3 = new Web3(window.ethereum);
-        props.setWeb3State(web3);
+        // let web3 = new Web3(window.ethereum);
+        props.setWeb3State(window.web3);
 
-        const bal = await web3.eth.getBalance(account);
+        const bal = await window.web3.eth.getBalance(account);
         // console.log('bal : ',bal);
 
-        setBalance(web3.utils.fromWei(bal, 'ether') + " ETH");
+        setBalance(window.web3.utils.fromWei(bal, 'ether') + " ETH");
 
     }
 

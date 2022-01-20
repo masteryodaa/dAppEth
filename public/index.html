@@ -20,9 +20,15 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+
+
 </head>
 
 <body>
+  <script>
+    window.web3 = new Web3(ethereum); // get web3 object and store it in window
+  </script>
   <div id="root"></div>
 
 </body>
