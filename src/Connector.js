@@ -7,11 +7,14 @@ function Connector(props) {
     const [user, setUser] = useState('');
     const [balance, setBalance] = useState(null);
 
-    const connectWallet = async () => {
-
+    window.onload = async () => {
         if(!window.ethereum){
             props.setWarning('Please install MetaMask !');
         }
+    }
+
+    const connectWallet = async () => {
+
         // const accounts = await window.ethereum.enable(); //old method to call metamask
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
 
