@@ -41,7 +41,7 @@ function App() {
 
       {done ? <DoneTransaction load={load} /> : ''}
 
-      {warning != null ? <h2 className="text-danger text-center">{warning}</h2> :
+      {warning != null ? <h2 className="text-dark text-center">{warning}</h2> :
         <Body address={address} web3={web3} doneChange={doneChange} setLoad={setLoadHandle} />
       }
 
