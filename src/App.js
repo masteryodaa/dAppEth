@@ -1,8 +1,8 @@
-import Header from "./Header";
+import Connector from "./Connector";
 import Body from "./Body";
 import Footer from "./Footer";
 import DoneTransaction from "./DoneTransaction";
-import {useState} from 'react';
+import { useState } from 'react';
 
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
   const [web3, setWeb3] = useState(null);
   const [done, setDone] = useState(false);
   const [load, setLoad] = useState(false);
+  const [warning, setWarning] = useState(null);
 
 
   const addressState = (address) => {
@@ -29,14 +30,20 @@ function App() {
     setLoad(load);
   }
 
+  const handleWarning = (warning) => {
+    setWarning(warning);
+  }
+
   return (
     <div className="app">
 
-      <Header address={addressState} setWeb3State={setWeb3State}/>
+      <Connector address={addressState} setWeb3State={setWeb3State} setWarning={handleWarning} />
 
       {done ? <DoneTransaction load={load} /> : ''}
 
-      <Body address={address} web3={web3} doneChange={doneChange} setLoad={setLoadHandle}/>
+      {warning != null ? <h2 className="text-danger text-center">{warning}</h2> :
+        <Body address={address} web3={web3} doneChange={doneChange} setLoad={setLoadHandle} />
+      }
 
       <Footer />
     </div>

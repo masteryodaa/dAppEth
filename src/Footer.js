@@ -9,7 +9,7 @@ function Footer() {
       <div className='mx-1'>Fork it at</div> <BsGithub />
     </a>
 
-    <div className="support my-1">
+    <div className="support my-1 ">
       <div>Support me at </div>
       <div className="bitcoin fw-bold"><FaBitcoin />15vnoxf6gH7WvotjakngexrspTzZVzofSB</div>
       <div className="ether fw-bold"><FaEthereum />0x3ef627d16041c1cd2a853689269c3abe1d85153a</div>

@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import metapng from "./metamask.png";
 
-function Header(props) {
+function Connector(props) {
 
     const [connection, setConnection] = useState(false);
     const [user, setUser] = useState('');
     const [balance, setBalance] = useState(null);
 
     const connectWallet = async () => {
+
+        if(!window.ethereum){
+            props.setWarning('Please install MetaMask !');
+        }
         // const accounts = await window.ethereum.enable(); //old method to call metamask
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
 
@@ -43,4 +47,4 @@ function Header(props) {
     </div>
 }
 
-export default Header;
+export default Connector;
