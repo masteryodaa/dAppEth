@@ -100,3 +100,15 @@ a{
  a:hover{
   color: red;
 }
+
+.link{
+  font-size: 15px;
+}
+
+.support{
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
