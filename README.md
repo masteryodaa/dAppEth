@@ -5,4 +5,4 @@ Open it in desktop with Metamask installed.
 
 Feel free to customize and contribute.
 
-### fork it.
+### just fork it.
