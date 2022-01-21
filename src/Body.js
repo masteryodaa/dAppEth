@@ -9,6 +9,7 @@ function Body(props) {
   // const [receiver, setReceiver] = useState(''); //adding it in app.js to make it accessible to all components
   const [txn, setTxn] = useState('0x0');
   const [cardLoad, setCardLoad] = useState(false);
+  const [btnflag, setBtnflag] = useState(false);
 
   const handleChange = (event) => {
     props.setReceiver(event.target.value);
@@ -24,6 +25,7 @@ function Body(props) {
   const sendeth = async () => {
 
     setCardLoad(true);
+    setBtnflag(true);
 
     console.log('sendeth');
 
@@ -53,9 +55,11 @@ function Body(props) {
     .then((result) => {
       console.log(result);
       props.setLoad(true);
+      setBtnflag(false);
     })
     .catch((err) => {
       console.log(err);
+      setBtnflag(false);
     });
 
   }
@@ -65,7 +69,7 @@ function Body(props) {
 
     {
       cardLoad ?
-      <Transaction eth={eth} receiver={props.receiver} address={props.address} txn={txn} handleCardLoad={handleCardLoad} doneChange={props.doneChange}/>
+      <Transaction eth={eth} receiver={props.receiver} address={props.address} txn={txn} handleCardLoad={handleCardLoad} doneChange={props.doneChange} btnflag={btnflag}/>
       :
     
     <div className="container py-1" id='container'>

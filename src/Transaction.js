@@ -1,13 +1,12 @@
 import { FaEthereum } from 'react-icons/fa';
 
 
-
 function Transaction(props) {
 
     const clickHandler = () => {
         props.handleCardLoad(false);
         props.doneChange(false);
-
+        // props.setBtnFlaf(false);
 
     }
 
@@ -33,7 +32,10 @@ function Transaction(props) {
 
             <div className="cardfooter text-center mb-2 mt-4">
 
-                <button className='btn btn-small rounded-pill' onClick={clickHandler}>New Transaction</button>
+                {
+                    props.btnflag ? <button className="btn btn-small rounded-pill disabled" onClick={clickHandler}>Sending</button> : 
+                
+                <button className='btn btn-small rounded-pill' onClick={clickHandler}>New Transaction</button> }
 
                 <small className="text-muted my-2">Transaction Hash - {props.txn}</small>
             </div>

@@ -37,7 +37,7 @@ function Connector(props) {
 
     }
 
-    return <div className="header d-flex flex-column align-items-center my-3">
+    return <div className="header d-flex flex-column align-items-center my-3 pb-2">
 
         <button className="btn btn-sm bg-warning rounded-pill px-4 my-3" onClick={connectWallet}>
             {connection ? <img src={metapng} alt="MetaMask" width="30" height="30" className='me-2' /> : <img src={metapng} alt="MetaMask" width="30" height="30" className='me-2' />}
