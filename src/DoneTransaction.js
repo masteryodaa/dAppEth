@@ -9,7 +9,7 @@ function DoneTransaction(props) {
   <div>
      { props.load ?
     
-    <div className='container text-center my-2'>
+    <div className='container text-center'>
       <h6>Transaction Successful ! </h6>
       <img src={icon} alt="Done" width="100px" height="100px" />
   </div> :

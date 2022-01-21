@@ -3,12 +3,13 @@ import { BsGithub } from 'react-icons/bs';
 import { FaBitcoin } from 'react-icons/fa';
 import { FaEthereum } from 'react-icons/fa';
 
-function Footer() {
+function Footer(props) {
 
   const ethClick = () => {
     var copyText = document.getElementById("ether").innerText;
     navigator.clipboard.writeText(copyText);
     console.log("Copied the text: " + copyText);
+    props.setReceiver(copyText);
   }
 
   const btcClick = () => {

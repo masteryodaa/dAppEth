@@ -8,6 +8,7 @@ import { useState } from 'react';
 function App() {
 
   const [address, setAddress] = useState('');
+  const [receiver, setReceiver] = useState('');
   const [web3, setWeb3] = useState(null);
   const [done, setDone] = useState(false);
   const [load, setLoad] = useState(false);
@@ -34,6 +35,10 @@ function App() {
     setWarning(warning);
   }
 
+  const handleReceiver = (receiver) => {
+    setReceiver(receiver);
+  }
+
   return (
     <div className="app">
 
@@ -42,10 +47,10 @@ function App() {
       {done ? <DoneTransaction load={load} /> : ''}
 
       {warning != null ? <h2 className="text-dark text-center">{warning}</h2> :
-        <Body address={address} web3={web3} doneChange={doneChange} setLoad={setLoadHandle} />
+        <Body address={address} web3={web3} doneChange={doneChange} setLoad={setLoadHandle} receiver={receiver} setReceiver={handleReceiver}/>
       }
 
-      <Footer />
+      <Footer setReceiver={handleReceiver}/>
     </div>
   );
 }
